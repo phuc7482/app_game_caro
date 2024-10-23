@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paper_background"
+    tools:context=".GameActivity"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <ScrollView
+            android:id="@+id/vertical_scrollbar"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scrollbar"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/boardLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/boardTableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/winningLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@color/black"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_newGame"
+            android:layout_marginLeft="60dp"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_new_game"
+                app:tint="@color/white"
+                android:id="@+id/btn_newGame"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New game"
+                android:textColor="@color/white"
+                android:layout_below="@id/btn_newGame"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_undo"
+                app:tint="@color/white"
+                android:id="@+id/btn_undo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Undo"
+                android:textColor="@color/white"
+                android:layout_below="@id/btn_undo"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:id="@+id/layout_Back">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/btn_back"
+                android:layout_marginRight="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main menu"
+                android:textColor="@color/white"
+                android:layout_below="@id/btn_back"
+                android:layout_alignParentEnd="true"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:background="#7F9391"
+        android:layout_gravity="center"
+        android:id="@+id/layoutWaitingPlayer"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting player ..."
+            android:layout_centerInParent="true"
+            android:id="@+id/txt_waitingPlayer"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_turn"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn: "
+            android:id="@+id/turn"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/turn"
+            android:text=" Your Turn"
+            android:id="@+id/txt_turnPlayer"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_Time"
+        android:layout_marginTop="55dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time: "
+            android:id="@+id/Time"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/Time"
+            android:text=" 20s"
+            android:id="@+id/txt_CountDownTime"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</FrameLayout>

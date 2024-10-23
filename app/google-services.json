@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "753266304327",
+    "project_id": "megatictactoe-a3dee",
+    "storage_bucket": "megatictactoe-a3dee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753266304327:android:9c11a74ad3095856931862",
+        "android_client_info": {
+          "package_name": "com.example.megatictactoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753266304327-ihuivu2jo1960o1acvshauo3gu7ch29b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsMgLT9XH8jpbPAlFGjchj4o3Raw3uVsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753266304327-ihuivu2jo1960o1acvshauo3gu7ch29b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
